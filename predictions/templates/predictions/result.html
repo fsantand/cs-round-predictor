@@ -1,0 +1,14 @@
+{% extends "predictions/template.html" %}
+
+{% block content %}
+<div class="columns mobile is-centered">
+    <div class="column is-half">
+        {% if will_win %}
+            {% include "predictions/card.html" with image_card="https://c.tenor.com/nANRKW9T2moAAAAC/csgo-counterstrike.gif" title_card="Ganaras!" body_card="Hay un 75% de probabilidades de que ganes la ronda según la predicción."%}
+        {% else %}
+            {% include "predictions/card.html" with image_card="https://c.tenor.com/RvGsUSddNbsAAAAC/demoted-russian-kid.gif" title_card="Perderas..." body_card="Hay un 75% de probabilidades de que pierdas la ronda según la predicción."%}
+        {% endif %}
+        <a role="button " href="{% url 'predictions:home' %}" class="button is-success is-fullwidth mt-2">Volver al menu</a>
+    </div>
+</div>
+{% endblock %}

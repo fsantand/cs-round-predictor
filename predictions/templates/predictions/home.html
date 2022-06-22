@@ -1,0 +1,90 @@
+{% extends "predictions/template.html" %}
+{% block content %}
+<form class="form-horizontal" action="{% url 'predictions:results' %}">
+    <fieldset>
+    
+    <!-- Select Basic -->
+    <div class="field">
+      <label class="label" for="InternalTeamId">Equipo</label>
+      <div class="control">
+          <div class="select">
+            <select id="InternalTeamId" name="InternalTeamId" class="is-fullwidth">
+              <option value="2">Counter-terrorist</option>
+              <option value="1">Terrorist</option>
+            </select>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Select Basic -->
+    <div class="field">
+      <label class="label" for="Map">Mapa</label>
+      <div class="control">
+          <div class="select">
+            <select id="Map" name="Map" class="">
+              <option value="1">de_dust2</option>
+              <option value="2">de_mirage</option>
+              <option value="3">de_inferno</option>
+              <option value="4">de_nuke</option>
+            </select>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Text input-->
+    <div class="field">
+      <label class="label" for="RoundId">Ronda actual</label>
+      <div class="control">
+        <input id="RoundId" name="RoundId" type="text" placeholder="1" class="input " required="">
+        <p class="help">En que ronda se encuentran</p>
+      </div>
+    </div>
+    
+    <!-- Text input-->
+    <div class="field">
+      <label class="label" for="RoundStartingEquipmentValue">Equipamiento inicial de la ronda</label>
+      <div class="control">
+        <input id="RoundStartingEquipmentValue" name="RoundStartingEquipmentValue" type="text" placeholder="800" class="input " required="">
+        <p class="help">Con cuantos dolares partiste la ronda?</p>
+      </div>
+    </div>
+    
+    <!-- Text input-->
+    <div class="field">
+      <label class="label" for="TeamStartingEquipmentValue">Valor equipamiento equipo</label>
+      <div class="control">
+        <input id="TeamStartingEquipmentValue" name="TeamStartingEquipmentValue" type="text" placeholder="3200" class="input " required="">
+        <p class="help">Cuanto es la suma del equipamiento del equipo?</p>
+      </div>
+    </div>
+    
+    <!-- Text input-->
+    <div class="field">
+      <label class="label" for="MatchKills">Bajas acumuladas</label>
+      <div class="control">
+        <input id="MatchKills" name="MatchKills" type="text" placeholder="0" class="input " required="">
+        <p class="help">Cuantas muertes enemigas hiciste hasta el momento?</p>
+      </div>
+    </div>
+    
+    <!-- Text input-->
+    <div class="field">
+      <label class="label" for="MatchAssists">Bajas asistidas</label>
+      <div class="control">
+        <input id="MatchAssists" name="MatchAssists" type="text" placeholder="0" class="input " required="">
+        <p class="help">Cuantas bajas asistidas llevas acumuladas?</p>
+      </div>
+    </div>
+    
+    <!-- Button -->
+    <div class="field">
+      <label class="label" for="submit_button"></label>
+      <div class="control">
+        <button id="submit" name="submit_button" class="button is-primary is-fullwidth">Predecir</button>
+      </div>
+    </div>
+    
+    </fieldset>
+    </form>
+    
+{% endblock content %}
