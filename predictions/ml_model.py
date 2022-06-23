@@ -1,7 +1,5 @@
-import pickle
-from typing import Dict
-from urllib import request
 import joblib
+from typing import Dict
 from sklearn.ensemble import RandomForestClassifier
 
 
