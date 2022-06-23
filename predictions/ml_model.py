@@ -20,7 +20,5 @@ def predict_if_will_win(request_data: Dict) -> bool:
         float(request_data.get("MatchKills")),
         float(request_data.get("MatchAssists")),
     ]
-    print(data)
     prediction = model.predict([data])
-    print(prediction)
     return prediction[0]
